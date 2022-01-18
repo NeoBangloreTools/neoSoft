@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- JavaScript Bundle with Popper -->
+<!-- CSS only -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="/home.js"></script>
+<style >
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ div.container{
+display: none;
+} 
+
+.box {
+	float: left;
+	width: 50%;
+	padding: 50px;
+	height: 300px;
+	height: 300px;
+	overflow-y: auto;
+}
+
+</style>
+</head>
+<body>
+<!-- -------------------------------------------- -->
+<h2 align="center">INTERVIEW HELPER</h2>
+
+<body style="background-color:powderblue;">
+</body>
+<br>
+<div >
+<label for="cars">CHOOSE A EXPRIENCE IN JAVA :</label>
+<br>
+<select name="exp" id="exp" onchange="getSelectValue();" style="width:33%;height:35px ;">
+<option value="Select Exprience">Select Exprience</option>
+  <option value="java(0-2)">java(0-2)</option>
+  <option value="java(1-2)">java(1-2)</option>
+  <option value="java(2-3)">java(2-3)</option>
+  <option value="java(3-4)">java(3-4)</option>
+</select>
+
+</div>
+<!-- -------------------------------------------- -->
+<div class="container">
+  <div class="column" style="background-color:cyne;">
+   
+
+   <form action="">
+   
+<br><br>   
+   <b> 1. communicaton</b>
+   <select name="communicaton" id="communicaton" onchange="getCommunication();">
+ <option value="select">select</option>
+    <option value="good4">good(4Star)</option>
+  <option value="excellent5">excellent(5Star)</option>
+  <option value="avarage3">avarage(3Star)</option>
+  <option value="belowavarage2">below avarage(2Star)</option>
+  <option value="poor1">poor(1Star)</option>
+  </select>
+  <hr>
+  <b> 2. Basic Of Web Developement</b>
+   <select name="BasicOfWebDevelopement" id="BasicOfWebDevelopement" onchange="getBasicOfWebDevelopement();">
+ <option value="select">select</option>
+   <option value="good4">good(4Star)</option>
+  <option value="excellent5">excellent(5Star)</option>
+  <option value="avarage3">avarage(3Star)</option>
+  <option value="belowavarage2">below avarage(2Star)</option>
+  <option value="poor1">poor(1Star)</option>
+  </select>
+   <hr>
+   <b> 3. Oops</b>
+   <select name="Oops" id="Oops" onchange="getOops();">
+ <option value="select">select</option>
+    <option value="good4">good(4Star)</option>
+  <option value="excellent5">excellent(5Star)</option>
+  <option value="avarage3">avarage(3Star)</option>
+  <option value="belowavarage2">below avarage(2Star)</option>
+  <option value="poor1">poor(1Star)</option>
+  </select>
+   <hr>
+   <b>4.Progremming Language/Framework</b>
+   <select name="ProgremmingLanguageFramework" id="ProgremmingLanguageFramework"onchange="getProgremmingLanguageFramework();" >
+    <option value="select">select</option>
+    <option value="good4">good(4Star)</option>
+  <option value="excellent5">excellent(5Star)</option>
+  <option value="avarage3">avarage(3Star)</option>
+  <option value="belowavarage2">below avarage(2Star)</option>
+  <option value="poor1">poor(1Star)</option>
+  </select>
+  <hr>
+   <b> 5. Database</b>
+   <select name="Database" id="Database"onchange="getDatabase();">
+ <option value="select">select</option>
+    <option value="good4">good(4Star)</option>
+  <option value="excellent5">excellent(5Star)</option>
+  <option value="avarage3">avarage(3Star)</option>
+  <option value="belowavarage2">below avarage(2Star)</option>
+  <option value="poor1">poor(1Star)</option>
+  </select>
+  <hr>
+  <b> 6.Version Control</b>
+   <select name="VersionControl" id="VersionControl"onchange="getVersionControl();">
+ <option value="select">select</option>
+    <option value="good4">good(4Star)</option>
+  <option value="excellent5">excellent(5Star)</option>
+  <option value="avarage3">avarage(3Star)</option>
+  <option value="belowavarage2">below avarage(2Star)</option>
+  <option value="poor1">poor(1Star)</option>
+  </select>
+  <hr>
+  
+ <div style="text-align:center"> 
+    <button type="button" class="btn btn-primary" onclick="myFunction()" >Submit</button> 
+</div>  
+
+   
+   
+   </form>
+   
+   
+   
+   
+  </div>
+  
+  <!-- -------------------------------------------- -->
+  <div class="column"  style="background-color:yellow;height: 100%">
+    
+    <div class="container" >
+    <h2>Result</h2>
+    
+     <p > 1. communication :<span id="comm"></span> </p>
+     <p > 2. basic of web devlopment :<span id="bowd"></span> </p> 
+     <p > 3. oops :<span id="oop"></span> </p> 
+     <p> 4. Programming Langauge/framework ::<span id="prog"></span> </p>
+      <p> 6. Database ::<span id="data"></span> </p>
+     <p> 5. version controller ::<span id="ver"></span> </p> 
+       <p >...........................................................................</p>
+     <b>   
+     
+     
+     
+    <p style="color:rgb(0, 128, 0);">The Result Is:: <span id="result"></span></p>
+    </b>
+    <button style="width: 45%; padding: 4px; position: relative;" class="btn btn-primary" onclick="myCopy()">Copy To ClipBoard</button> 
+    <textarea  id="output" style="width:1px;height:1px ;"></textarea>
+    </div>
+    
+    </div>
+    </div>
+    
+ 
+ 
+
+
+</body>
+</html>
